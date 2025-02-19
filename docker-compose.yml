@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  tokyo-night-theme:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tokyo-night-theme-container
+    working_dir: /theme
+    command: bash build.sh
+    volumes:
+      - ./themes:/theme
